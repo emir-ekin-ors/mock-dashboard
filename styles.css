@@ -115,12 +115,8 @@ li {
 }
 
 .profile-picture {
-    background: url('https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     border-radius: 100px;
-}
-
-.search-row .profile-picture {
     width: 40px;
     height: 40px;
 }
@@ -168,27 +164,16 @@ li {
     background-color: var(--gray-color);
 
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: 1fr 1fr / 3fr 250px;
     grid-template-areas:
         "projects announcements"
         "projects trending";
     gap: 20px;
     padding: 20px;
-    padding-bottom: 50px;
 }
 
 .projects-container {
     grid-area: projects;
-}
-
-.announcements-container {
-    grid-area: announcements;
-    border: 2px solid black;
-}
-
-.trending-container {
-    grid-area: trending;
-    border: 2px solid black;
 }
 
 .heading {
@@ -238,4 +223,59 @@ li {
 .card-icon {
     height: 20px;
     width: 20px;
+}
+
+.announcements-container {
+    grid-area: announcements;
+}
+
+.announcement-card,
+.trending-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.trending-card {
+    padding-bottom: 5px;
+}
+
+.announcement-card .title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.announcement-card .description {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.trending-container {
+    grid-area: trending;
+}
+
+.trending-user {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.trending-user .profile-picture {
+    margin-right: 10px;
+}
+
+.user-id {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.app-name {
+    font-size: 14px;
+    opacity: 0.5;
 }
